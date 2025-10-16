@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "exclude": ["jest.config.*", "**/*.d.ts"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "emitDeclarationOnly": true,
+    "declarationDir": "auto-type-defs",
+    "tsBuildInfoFile": "auto-type-defs/build.tsbuildinfo",
+    "paths": {
+      "@shared": ["./src/index.ts"]
+    }
+  },
+}

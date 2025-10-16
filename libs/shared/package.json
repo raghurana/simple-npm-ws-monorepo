@@ -1,0 +1,10 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "shx rm -rf .jest-cache auto-type-defs coverage node_modules dist",
+    "test": "jest --silent"
+  }
+}

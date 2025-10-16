@@ -1,0 +1,12 @@
+{
+  "name": "create-cli-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "plop cli-app"
+  },
+  "devDependencies": {
+    "plop": "^4.0.5"
+  }
+}

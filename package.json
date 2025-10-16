@@ -1,0 +1,47 @@
+{
+  "name": "simple-npm-ws-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Raghu Rana",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "libs/*",
+    "tools/*"
+  ],
+  "scripts": {
+    "postinstall": "husky",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present && shx rm -rf node_modules .husky .jest-cache",
+    "new:cli": "npm run generate -w create-cli-app --",
+    "update": "chmod +x ./scripts/update-packages.sh && ./scripts/update-packages.sh"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.9.1",
+    "esbuild": "^0.28.0",
+    "esbuild-plugin-alias-path": "^2.0.2",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^9.1.7",
+    "jest": "^30.4.2",
+    "jest-util": "^30.4.1",
+    "lint-staged": "^17.0.5",
+    "shx": "^0.4.0",
+    "ts-jest": "^29.4.11",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npx eslint --max-warnings=0 --no-error-on-unmatched-pattern --fix",
+      "npx prettier --write"
+    ]
+  }
+}

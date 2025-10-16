@@ -1,0 +1,7 @@
+import { hello } from '@shared';
+
+export const run = (name = 'World'): string => {
+  return hello(name);
+};
+
+console.log(run('CLI'));

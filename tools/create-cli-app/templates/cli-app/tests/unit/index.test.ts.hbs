@@ -1,0 +1,7 @@
+import { run } from '../../src/index.ts';
+
+describe('{{appName name}} CLI', () => {
+  test('uses libs/shared through the @shared alias', () => {
+    expect(run('CLI')).toBe('Hello, CLI!');
+  });
+});

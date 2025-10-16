@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "exclude": ["jest.config.*"],
+  "references": [{ "path": "../../libs/shared" }],
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist",
+    "tsBuildInfoFile": "dist/build.tsbuildinfo",
+    "noEmit": true,
+    "paths": {
+      "@shared": ["../../libs/shared/src/index.ts"]
+    }
+  }
+}

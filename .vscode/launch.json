@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch (debug workspace)",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run debug -w=${input:workspaceName}",
+            "cwd": "${workspaceFolder}",
+        }
+    ],
+    "inputs": [
+        {
+            "id": "workspaceName",
+            "type": "promptString",
+            "description": "Workspace package name to debug",
+        }
+    ]
+}
