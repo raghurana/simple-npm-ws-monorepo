@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx --tsconfig ./tsconfig.json --watch src/index.ts",
-    "debug": "tsx --tsconfig ./tsconfig.json --watch src/index.ts --inspect-brk=9229",
+    "dev": "tsx --tsconfig ./tsconfig.json --watch --env-file .env src/index.ts",
+    "debug": "tsx --tsconfig ./tsconfig.json --watch --env-file .env src/index.ts --inspect-brk=9229",
     "clean": "shx rm -rf .jest-cache coverage dist node_modules",
     "prebuild": "tsc -b && npm run clean",
     "build": "tsx esbuild.config.ts",

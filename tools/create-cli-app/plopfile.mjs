@@ -47,6 +47,16 @@ export default function configurePlop(plop) {
       },
       {
         type: 'add',
+        path: resolve(repoRoot, 'apps/{{appName name}}/.env'),
+        templateFile: 'templates/cli-app/.env.hbs',
+      },
+      {
+        type: 'add',
+        path: resolve(repoRoot, 'apps/{{appName name}}/.env.sample.ts'),
+        templateFile: 'templates/cli-app/.env.sample.ts.hbs',
+      },
+      {
+        type: 'add',
         path: resolve(repoRoot, 'apps/{{appName name}}/tsconfig.json'),
         templateFile: 'templates/cli-app/tsconfig.json.hbs',
       },
@@ -64,6 +74,11 @@ export default function configurePlop(plop) {
         type: 'add',
         path: resolve(repoRoot, 'apps/{{appName name}}/src/index.ts'),
         templateFile: 'templates/cli-app/src/index.ts.hbs',
+      },
+      {
+        type: 'add',
+        path: resolve(repoRoot, 'apps/{{appName name}}/src/env-vars.ts'),
+        templateFile: 'templates/cli-app/src/env-vars.ts.hbs',
       },
       {
         type: 'add',

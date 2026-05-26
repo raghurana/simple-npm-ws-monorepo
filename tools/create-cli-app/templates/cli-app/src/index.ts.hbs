@@ -1,7 +1,9 @@
+import { env } from './env-vars.ts';
 import { hello } from '@shared';
 
 export const run = (name = 'World'): string => {
   return hello(name);
 };
 
+console.log(`Running ${env.APP_NAME}...`);
 console.log(run('CLI'));
